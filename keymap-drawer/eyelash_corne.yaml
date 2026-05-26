@@ -92,12 +92,12 @@ layers:
   - {t: ., s: '>'}
   - {t: /, s: '?'}
   - $$mdi:keyboard-esc$$
-  - $$mdi:keyboard-esc$$
-  - NUMBER
-  - {t: '$$mdi:keyboard-space$$', h: Fn}
+  - {t: '$$mdi:keyboard-esc$$', h: Fn}
+  - {t: '$$mdi:keyboard-space$$', h: ModsL}
+  - {t: '$$mdi:keyboard-tab$$', h: NUMBER}
   - {t: '$$mdi:keyboard-return$$', h: Fn}
-  - SYMBOL
-  - $$mdi:apple-keyboard-option$$
+  - {t: '$$mdi:backspace$$', h: ModsR}
+  - $$mdi:backspace-reverse-outline$$
   NUMBER:
   - $$mdi:bluetooth-off$$
   - {h: '1', s: '$$mdi:bluetooth-connect$$'}
@@ -142,7 +142,7 @@ layers:
   - {t: \, s: '|'}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {type: held alternate}
+  - {t: '$$mdi:transfer$$', type: trans}
   - {type: held}
   - {t: ., s: '>'}
   - {t: '0', s: )}
@@ -194,7 +194,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - $$mdi:keyboard-space$$
   - {t: '$$mdi:keyboard-return$$', type: enter}
-  - {type: held}
+  - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   Fn:
   - '&studio_unlock'
@@ -241,7 +241,7 @@ layers:
   - PAUSE BREAK
   - {type: held}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {type: held alternate}
+  - {t: '$$mdi:transfer$$', type: trans}
   - {t: F1, type: held alternate}
   - F2
   - F3
