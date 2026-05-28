@@ -80,7 +80,7 @@
 &none  &kp Q  &kp W  &kp F         &kp P        &kp B                                    &kp UP                &kp J        &kp L            &kp U      &kp Y    &kp APOSTROPHE  &none
 &none  &kp A  &kp R  &kp S         &kp T        &kp G                          &kp LEFT  &kp ENTER  &kp RIGHT  &kp M        &kp N            &kp E      &kp I    &kp O           &kp MINUS
 &none  &kp Z  &kp X  &kp C         &kp D        &kp V      &kp C_PLAY_PAUSE              &kp DOWN              &kp K        &kp H            &kp COMMA  &kp DOT  &kp FSLH        &none
-                     &lt 4 ESCAPE  &lt 5 SPACE  &lt 2 TAB                                                      &lt 4 ENTER  &lt 6 BACKSPACE  &kp DEL
+                     &lt 4 ESCAPE  &lt 5 SPACE  &lt 2 TAB                                                      &lt 3 ENTER  &lt 6 BACKSPACE  &kp DEL
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
@@ -89,10 +89,10 @@
         QWERTY {
             display-name = "QWERTY";
             bindings = <
-&kp TAB         &kp Q  &kp W  &kp E      &kp R        &kp T                             &kp UP                &kp Y        &kp U            &kp I      &kp O    &kp P     &kp BSPC
-&kp LEFT_SHIFT  &kp A  &kp S  &kp D      &kp F        &kp G                   &kp LEFT  &kp ENTER  &kp RIGHT  &kp H        &kp J            &kp K      &kp L    &kp SEMI  &kp SQT
-&kp LCTRL       &kp Z  &kp X  &kp C      &kp V        &kp B      &kp SPACE              &kp DOWN              &kp N        &kp M            &kp COMMA  &kp DOT  &kp FSLH  &kp ESC
-                              &lt 4 ESC  &lt 5 SPACE  &lt 2 TAB                                               &lt 4 ENTER  &lt 6 BACKSPACE  &kp DEL
+&kp TAB         &kp Q  &kp W  &kp E      &kp R        &kp T                            &kp UP                &kp Y        &kp U            &kp I      &kp O    &kp P     &kp BSPC
+&kp LEFT_SHIFT  &kp A  &kp S  &kp D      &kp F        &kp G                  &kp LEFT  &kp ENTER  &kp RIGHT  &kp H        &kp J            &kp K      &kp L    &kp SEMI  &kp SQT
+&kp LCTRL       &kp Z  &kp X  &kp C      &kp V        &kp B      &kp C_PP              &kp DOWN              &kp N        &kp M            &kp COMMA  &kp DOT  &kp FSLH  &kp ESC
+                              &lt 4 ESC  &lt 5 SPACE  &lt 2 TAB                                              &lt 4 ENTER  &lt 6 BACKSPACE  &kp DEL
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
@@ -103,31 +103,30 @@
             bindings = <
 &bt BT_CLR    &bt BT_SEL 0     &bt BT_SEL 1     &bt BT_SEL 2     &bt BT_SEL 3     &bt BT_SEL 4                                &mmv MOVE_UP                     &kp LBKT   &kp N7  &kp N8     &kp N9  &kp RBKT   &kp BSPC
 &out OUT_BLE  &kp LEFT_GUI     &kp LEFT_ALT     &kp LCTRL        &kp LEFT_SHIFT   &trans                      &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp SEMI   &kp N4  &kp N5     &kp N6  &kp EQUAL  &kp ENTER
-&out OUT_USB  &rgb_ug RGB_TOG  &rgb_ug RGB_EFF  &rgb_ug RGB_BRI  &rgb_ug RGB_BRD  &trans        &kp C_MUTE                    &mmv MOVE_DOWN                   &kp GRAVE  &kp N1  &kp N2     &kp N3  &kp BSLH   &trans
+&out OUT_USB  &rgb_ug RGB_TOG  &rgb_ug RGB_EFF  &rgb_ug RGB_BRI  &rgb_ug RGB_BRD  &trans        &kp C_MUTE                    &mmv MOVE_DOWN                   &kp GRAVE  &kp N1  &kp N2     &kp N3  &kp SLASH  &kp BACKSLASH
                                                 &trans           &trans           &trans                                                                       &kp DOT    &kp N0  &kp MINUS
             >;
 
-            sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOL_DN>;
+            sensor-bindings = <&rgb_encoder>;
         };
 
-        raise_layer {
-            display-name = "SYMBOL";
+        NavigationMedia {
             bindings = <
-&trans  &kp EXCL      &kp AT        &kp HASH   &kp DLLR   &kp PRCNT                            &mmv MOVE_UP                     &kp CARET  &kp AMPS   &kp ASTRK  &kp LPAR  &kp RPAR  &kp BSPC
-&trans  &bt BT_CLR    &mkp LCLK     &mkp MCLK  &mkp RCLK  &mkp MB4             &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp MINUS  &kp EQUAL  &kp LBKT   &kp RBKT  &kp BSLH  &kp GRAVE
-&trans  &out OUT_USB  &out OUT_BLE  &none      &none      &mkp MB5   &trans                    &mmv MOVE_DOWN                   &kp UNDER  &kp PLUS   &kp LBRC   &kp RBRC  &kp PIPE  &kp TILDE
-                                    &trans     &trans     &kp SPACE                                                             &kp RET    &trans     &trans
+&trans  &trans  &trans  &trans  &trans  &trans                         &kp C_VOLUME_UP               &trans    &kp PG_UP  &kp UP    &kp PG_DN  &trans   &trans
+&trans  &trans  &trans  &trans  &trans  &trans             &kp C_PREV  &kp C_PLAY_PAUSE  &kp C_NEXT  &kp HOME  &kp LEFT   &kp DOWN  &kp RIGHT  &kp END  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &kp TAB                &kp C_VOL_DN                  &trans    &trans     &trans    &trans     &trans   &trans
+                        &trans  &trans  &trans                                                       &trans    &trans     &trans
             >;
 
-            sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOL_DN>;
+            sensor-bindings = <&scroll_encoder>;
         };
 
-        layer_3 {
+        Function {
             display-name = "Fn";
             bindings = <
 &studio_unlock  &trans      &trans     &trans       &trans     &trans                                  &mmv MOVE_UP                     &trans       &kp F10  &kp F11  &kp F12  &trans           &trans
 &trans          &trans      &mkp LCLK  &mkp MCLK    &mkp RCLK  &mkp MB4                &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &bootloader  &kp F7   &kp F8   &kp F9   &kp PRINTSCREEN  &trans
-&trans          &sys_reset  &trans     &bootloader  &trans     &mkp MB5  &kp C_MUTE                    &mmv MOVE_DOWN                   &trans       &kp F4   &kp F5   &kp F6   &kp SCROLLLOCK   &kp PAUSE_BREAK
+&trans          &sys_reset  &trans     &bootloader  &trans     &mkp MB5  &kp C_MUTE                    &mmv MOVE_DOWN                   &trans       &kp F4   &kp F5   &kp F6   &kp SCROLLLOCK   &trans
                                        &trans       &trans     &trans                                                                   &kp F1       &kp F2   &kp F3
             >;
 
