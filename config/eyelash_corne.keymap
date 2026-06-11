@@ -77,10 +77,10 @@
         Main {
             display-name = "Colemak DH";
             bindings = <
-&none  &kp Q  &kp W  &kp F         &kp P        &kp B                                    &kp UP                &kp J        &kp L            &kp U      &kp Y    &kp APOSTROPHE  &none
-&none  &kp A  &kp R  &kp S         &kp T        &kp G                          &kp LEFT  &kp ENTER  &kp RIGHT  &kp M        &kp N            &kp E      &kp I    &kp O           &kp MINUS
-&none  &kp Z  &kp X  &kp C         &kp D        &kp V      &kp C_PLAY_PAUSE              &kp DOWN              &kp K        &kp H            &kp COMMA  &kp DOT  &kp FSLH        &none
-                     &lt 4 ESCAPE  &lt 5 SPACE  &lt 2 TAB                                                      &lt 3 ENTER  &lt 6 BACKSPACE  &kp DEL
+&bt BT_NXT       &kp Q  &kp W  &kp F         &kp P        &kp B                                    &kp UP                &kp J        &kp L            &kp U      &kp Y    &kp APOSTROPHE  &none
+&caps_word       &kp A  &kp R  &kp S         &kp T        &kp G                          &kp LEFT  &kp ENTER  &kp RIGHT  &kp M        &kp N            &kp E      &kp I    &kp O           &kp MINUS
+&rgb_ug RGB_TOG  &kp Z  &kp X  &kp C         &kp D        &kp V      &kp C_PLAY_PAUSE              &kp DOWN              &kp K        &kp H            &kp COMMA  &kp DOT  &kp FSLH        &none
+                               &lt 4 ESCAPE  &lt 5 SPACE  &lt 2 TAB                                                      &lt 3 ENTER  &lt 6 BACKSPACE  &kp DEL
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
@@ -135,19 +135,19 @@
 
         ModsL {
             bindings = <
-&trans  &trans        &trans        &trans     &trans          &trans                    &trans          &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &sk LEFT_GUI  &sk LEFT_ALT  &sk LCTRL  &sk LEFT_SHIFT  &trans            &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans        &trans        &trans     &trans          &trans  &trans            &trans          &trans  &trans  &trans  &trans  &trans  &trans
-                                    &trans     &trans          &trans                                    &trans  &trans  &trans
+&trans  &trans        &trans        &trans     &trans          &trans                    &trans          &trans     &trans         &trans   &trans  &trans  &trans
+&trans  &sk LEFT_GUI  &sk LEFT_ALT  &sk LCTRL  &sk LEFT_SHIFT  &trans            &trans  &trans  &trans  &trans     &trans         &trans   &trans  &trans  &trans
+&trans  &trans        &trans        &trans     &trans          &trans  &trans            &trans          &trans     &trans         &trans   &trans  &trans  &trans
+                                    &trans     &trans          &trans                                    &kp ENTER  &kp BACKSPACE  &kp DEL
             >;
         };
 
         ModsR {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans                    &trans          &trans  &trans           &trans     &trans         &trans         &trans
-&trans  &trans  &trans  &trans  &trans  &trans            &trans  &trans  &trans  &trans  &sk RIGHT_SHIFT  &sk RCTRL  &sk RIGHT_ALT  &sk RIGHT_GUI  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans            &trans          &trans  &trans           &trans     &trans         &trans         &trans
-                        &trans  &trans  &trans                                    &trans  &trans           &trans
+&trans  &trans  &trans  &trans   &trans     &trans                     &trans          &trans  &trans           &trans     &trans         &trans         &trans
+&trans  &trans  &trans  &trans   &trans     &trans             &trans  &trans  &trans  &trans  &sk RIGHT_SHIFT  &sk RCTRL  &sk RIGHT_ALT  &sk RIGHT_GUI  &trans
+&trans  &trans  &trans  &trans   &trans     &trans   &trans            &trans          &trans  &trans           &trans     &trans         &trans         &trans
+                        &kp ESC  &kp SPACE  &kp TAB                                    &trans  &trans           &trans
             >;
         };
     };
